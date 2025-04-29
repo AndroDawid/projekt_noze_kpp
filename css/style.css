@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    height: 950px;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url(../img/tlo.png) no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.topbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.menu img {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.tlo::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2em;
+    font-weight: 50;
+}
+
+header button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+
+header button:hover {
+    background: white;
+    color: black;
+}
