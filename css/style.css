@@ -128,13 +128,56 @@ h2{
     text-align: center;
 }
 
-.produkty{
+.produkty {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 0 140px;
 }
 
-.produkty img{
-    width: 300px;
-    height: 500px;
+.produkty div {
+    position: relative;
+    overflow: hidden;
+}
+
+.produkty div .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.produkty div .overlay h3,
+.produkty div .overlay p {
+    font-weight: 300;
+    z-index: 2;
+}
+
+.produkty div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.produkty div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    pointer-events: none;
+    z-index: 1;
 }
