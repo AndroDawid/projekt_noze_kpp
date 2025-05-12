@@ -181,3 +181,46 @@ h2{
     pointer-events: none;
     z-index: 1;
 }
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.historia img{
+    width: 100%;
+}
+
+.historia h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.historia p {
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+}
+
+.historia-button{
+    width: 168px;
+    padding: 0.75rem 2rem;
+    border: 1px solid white;
+    background: #EAEAEA;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+
+.historia .historia-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
