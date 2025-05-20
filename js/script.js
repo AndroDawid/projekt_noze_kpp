@@ -22,16 +22,15 @@ const changeBackground = (direction) => {
 leftArrow.addEventListener('click', () => changeBackground('left'));
 rightArrow.addEventListener('click', () => changeBackground('right'));
 
-// Pobranie elementu topbaru
 const topbar = document.querySelector('.topbar');
+if (topbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            topbar.classList.add('scrolled');
+        } else {
+            topbar.classList.remove('scrolled');
+        }
+    });
+}
 
-// Funkcja nasłuchująca scroll
-window.addEventListener('scroll', () => {
-    // Jeśli strona jest przewinięta o więcej niż 50px
-    if (window.scrollY > 50) {
-        topbar.classList.add('scrolled');
-    } else {
-        topbar.classList.remove('scrolled');
-    }
-});
 
