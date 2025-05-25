@@ -42,3 +42,11 @@ if (historiaButton) {
     });
 }
 
+const productButton = document.querySelector('.button-produkt');
+
+if(productButton) {
+    productButton.addEventListener('click', () => {
+        window.location.href = 'lista_produktow.html';
+    });
+}
+
