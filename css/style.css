@@ -18,6 +18,10 @@ header {
     position: relative;
 }
 
+a{
+    text-decoration: none;
+}
+
 .topbar {
     position: fixed;
     top: 0;

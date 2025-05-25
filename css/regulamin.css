@@ -17,6 +17,10 @@ header {
     position: relative;
 }
 
+a{
+    text-decoration: none;
+}
+
 .topbar {
     position: fixed;
     top: 0;
@@ -380,6 +384,117 @@ button[type="submit"]:hover {
     height: auto;
     margin-left: 50px;
     transform: scale(1.2);
+}
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.historia-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 1rem;
+}
+
+.historia h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.historia p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.historia img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.historia-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.historia-2 .historia-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.historia-2 h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.historia-2 p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.historia-2 .historia-image img {
+    width: 120%;
+    height: auto;
+    display: block;
+    transform: scale(1.1);
+    margin-left: -10%;
+}
+
+.historia-produkty {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.produkt {
+    position: relative;
+    overflow: hidden;
+}
+
+.produkt img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.produkt:hover img:first-child {
+    opacity: 50%;
+}
+
+.produkt .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.produkt:hover .overlay {
+    opacity: 1;
 }
 
 footer {

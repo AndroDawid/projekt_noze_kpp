@@ -34,3 +34,11 @@ if (topbar) {
 }
 
 
+const historiaButton = document.querySelector('.historia-button');
+
+if (historiaButton) {
+    historiaButton.addEventListener('click', () => {
+        window.location.href = 'historia.html';
+    });
+}
+
