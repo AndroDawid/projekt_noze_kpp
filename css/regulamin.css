@@ -151,6 +151,7 @@ section div{
     color: #d43535;
 }
 
+/* Regulamin */
 h1{
     text-align: center;
     font-weight: 300;
@@ -167,6 +168,8 @@ article{
 p{
     font-weight: 300;
 }
+
+/* Kontakt */
 
 .kontakt-gora {
     display: flex;
@@ -385,6 +388,8 @@ button[type="submit"]:hover {
     margin-left: 50px;
     transform: scale(1.2);
 }
+
+/* historia */
 
 .historia {
     display: grid;
