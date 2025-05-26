@@ -9,13 +9,61 @@ if (topbar) {
     });
 }
 
-const historiaButton = document.querySelector('.produkt-button');
+const menuIcon = document.querySelector('img[alt="Menu"]');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
 
-if (historiaButton) {
-    historiaButton.addEventListener('click', () => {
+menuIcon.addEventListener('click', () => {
+    hamburgerMenu.style.display = hamburgerMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+const produktButtons = document.querySelectorAll('.produkt-button');
+
+produktButtons.forEach(button => {
+    button.addEventListener('click', () => {
         window.location.href = 'podglad_produktu.html';
     });
+});
+
+const powrotButton = document.querySelector('.powrot-lista');
+
+if (powrotButton) {
+    powrotButton.addEventListener('click', () => {
+        window.location.href = 'lista_produktow.html';
+    });
 }
+
+const blogButton = document.querySelector('.blog-button');
+
+if (blogButton) {
+    blogButton.addEventListener('click', () => {
+        window.location.href = 'blog_poglad.html';
+    });
+}
+
+const blog_powrotButton = document.querySelector('.blog-powrot');
+
+if (blog_powrotButton) {
+    blog_powrotButton.addEventListener('click', () => {
+        window.location.href = 'blog_lista.html';
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const quantityInput = document.querySelector('input[name="quantity"]');
+    const plusButton = document.querySelector('.quantity-control .plus');
+    const minusButton = document.querySelector('.quantity-control .minus');
+
+    plusButton.addEventListener('click', () => {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    });
+
+    minusButton.addEventListener('click', () => {
+        if (parseInt(quantityInput.value) > 1) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    });
+});
+
 
 const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');

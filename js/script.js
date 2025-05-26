@@ -33,6 +33,20 @@ if (topbar) {
     });
 }
 
+const menuIcon = document.querySelector('img[alt="Menu"]');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+menuIcon.addEventListener('click', () => {
+    hamburgerMenu.style.display = hamburgerMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+const headerButton = document.querySelector('.header-button');
+
+if (headerButton) {
+    headerButton.addEventListener('click', () => {
+        window.location.href = 'lista_produktow.html';
+    });
+}
 
 const historiaButton = document.querySelector('.historia-button');
 
