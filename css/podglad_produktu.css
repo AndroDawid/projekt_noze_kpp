@@ -533,7 +533,20 @@ hr{
     body, html {
         overflow-x: hidden;
     }
-
+    .product-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .specification {
+        padding: 0;
+    }
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .arrow {
+        display: none;
+    }
     .topbar {
         padding: 10px 20px;
         width: 100%;
