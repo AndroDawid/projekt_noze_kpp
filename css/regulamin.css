@@ -272,3 +272,69 @@ hr{
 .footer-bottom p {
     margin: 5px 0;
 }
+
+@media (max-width: 720px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .topbar {
+        padding: 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: black;
+    }
+
+    .menu-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-bar,
+    .icons,
+    .hamburger-menu {
+        display: none;
+    }
+
+    .menu-img {
+        display: block;
+        height: 30px;
+        width: auto;
+        cursor: pointer;
+    }
+
+    .logo img {
+        height: auto;
+        max-height: 50px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .payment-icons img {
+        width: 50px;
+        margin-right: 5px;
+    }
+}
