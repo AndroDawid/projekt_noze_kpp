@@ -56,11 +56,11 @@ if (historiaButton) {
     });
 }
 
-const productButton = document.querySelector('.button-produkt');
+const productButtons = document.querySelectorAll('.button-produkt');
 
-if(productButton) {
-    productButton.addEventListener('click', () => {
+productButtons.forEach(button => {
+    button.addEventListener('click', () => {
         window.location.href = 'lista_produktow.html';
     });
-}
+});
 

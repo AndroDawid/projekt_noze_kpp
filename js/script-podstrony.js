@@ -84,7 +84,6 @@ function renderPagination() {
     let windowStart = Math.max(1, currentPage - Math.floor(visibleWindowSize / 2));
     let windowEnd = windowStart + visibleWindowSize - 1;
 
-    // make sure we don't overlap fixed end pages
     if (windowEnd >= fixedEndPages[0]) {
         windowEnd = fixedEndPages[0] - 1;
         windowStart = windowEnd - visibleWindowSize + 1;
@@ -92,7 +91,6 @@ function renderPagination() {
 
     windowStart = Math.max(1, windowStart);
 
-    // render sliding window of pages
     for (let i = windowStart; i <= windowEnd; i++) {
         const page = document.createElement('span');
         page.className = 'page';
@@ -105,7 +103,6 @@ function renderPagination() {
         container.appendChild(page);
     }
 
-    // render ... if needed
     if (windowEnd < fixedEndPages[0] - 1) {
         const dots = document.createElement('span');
         dots.className = 'dots';
@@ -113,7 +110,6 @@ function renderPagination() {
         container.appendChild(dots);
     }
 
-    // render fixed pages (10–13)
     fixedEndPages.forEach((p) => {
         const page = document.createElement('span');
         page.className = 'page';
